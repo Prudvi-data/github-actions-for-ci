@@ -9,7 +9,6 @@ jobs:
         animal: [cat, dog]
         include:
           - color: green
-            animal: cat
           - color: pink
             animal: cat
           - fruit: apple
