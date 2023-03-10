@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Label when approved
-      run: echo ${{matrix.fruit}}
+      run: echo ${{matrix.color}}
