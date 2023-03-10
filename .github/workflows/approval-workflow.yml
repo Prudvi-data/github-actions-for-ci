@@ -1,12 +1,23 @@
 name: Team awesome's approval workflow
-on: pull_request_review
+on:
+  workflow_dispatch:
 jobs:
   labelWhenApproved:
+    strategy:
+      matrix:
+        fruit: [apple, pear]
+        animal: [cat, dog]
+        include:
+          - color: green
+            animal: cat
+          - color: pink
+            animal: cat
+          - fruit: apple
+            shape: circle
+          - fruit: banana
+          - fruit: banana
+            animal: cat
     runs-on: ubuntu-latest
     steps:
     - name: Label when approved
-      uses: pullreminders/label-when-approved-action@master
-      env:
-        APPROVALS: "1"
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ADD_LABEL: "approved"
+      run: echo ${{matrix.fruit}}
