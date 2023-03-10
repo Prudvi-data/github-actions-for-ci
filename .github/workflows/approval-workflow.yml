@@ -5,17 +5,12 @@ jobs:
   labelWhenApproved:
     strategy:
       matrix:
-        fruit: [apple, pear]
+        #fruit: [apple, pear]
         animal: [cat, dog]
         include:
           - color: pink
             animal: cat
           - color: green
-            animal: cat
-          - fruit: apple
-            shape: circle
-          - fruit: banana
-          - fruit: banana
             animal: cat
     runs-on: ubuntu-latest
     steps:
