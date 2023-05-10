@@ -15,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Label when approved
-      run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+      run: echo "::warning::Missing semicolon"
